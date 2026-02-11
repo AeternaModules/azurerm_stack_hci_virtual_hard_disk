@@ -26,7 +26,7 @@ EOT
     resource_group_name      = string
     block_size_in_bytes      = optional(number)
     disk_file_format         = optional(string)
-    dynamic_enabled          = optional(bool, false)
+    dynamic_enabled          = optional(bool) # Default: false
     hyperv_generation        = optional(string)
     logical_sector_in_bytes  = optional(number)
     physical_sector_in_bytes = optional(number)
