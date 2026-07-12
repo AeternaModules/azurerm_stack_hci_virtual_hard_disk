@@ -1,3 +1,7 @@
+output "stack_hci_virtual_hard_disks_id" {
+  description = "Map of id values across all stack_hci_virtual_hard_disks, keyed the same as var.stack_hci_virtual_hard_disks"
+  value       = { for k, v in azurerm_stack_hci_virtual_hard_disk.stack_hci_virtual_hard_disks : k => v.id }
+}
 output "stack_hci_virtual_hard_disks_block_size_in_bytes" {
   description = "Map of block_size_in_bytes values across all stack_hci_virtual_hard_disks, keyed the same as var.stack_hci_virtual_hard_disks"
   value       = { for k, v in azurerm_stack_hci_virtual_hard_disk.stack_hci_virtual_hard_disks : k => v.block_size_in_bytes }
